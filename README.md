@@ -15,6 +15,19 @@
 
 ---
 
+## 📦 Deployment
+
+### Render (One-Click Deploy)
+This repository includes a `render.yaml` blueprint for automated deployment:
+1. Visit [dashboard.render.com](https://dashboard.render.com)
+2. Click "New +" → "Blueprint"
+3. Connect repository: `mk-knight23/24-web-sketch-studio`
+4. Render will auto-detect and apply the blueprint configuration
+
+### Manual Deployment
+- **Build Command**: `npm run build`
+- **Publish Directory**: `dist`
+
 ## Overview
 
 Web Sketch Studio replaces legacy canvas scripts with a robust, production-grade creative engine. It features a sophisticated layer management system, real-time tool modulators, and a high-fidelity "Studio Dark" design system.
