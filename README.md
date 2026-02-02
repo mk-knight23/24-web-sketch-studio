@@ -1,4 +1,4 @@
-# DrawLab - Professional Canvas Creative Suite
+# Web Sketch Studio
 
 <div align="center">
 
@@ -9,7 +9,7 @@
 
 **A high-performance, multi-layer canvas drawing application built with Vue 3 and Konva.js**
 
-[Live Demo](https://drawlab.vercel.app) | [GitHub](https://github.com/mk-knight23/60-Draw-Web-Canvas-App)
+[GitHub](https://github.com/mk-knight23/24-web-sketch-studio)
 
 </div>
 
@@ -17,7 +17,7 @@
 
 ## Overview
 
-DrawLab replaces legacy canvas scripts with a robust, production-grade creative engine. It features a sophisticated layer management system, real-time tool modulators, and a high-fidelity "Studio Dark" design system.
+Web Sketch Studio replaces legacy canvas scripts with a robust, production-grade creative engine. It features a sophisticated layer management system, real-time tool modulators, and a high-fidelity "Studio Dark" design system.
 
 ### Problem Statement
 
@@ -29,7 +29,7 @@ Traditional canvas applications suffer from:
 
 ### Solution
 
-DrawLab provides:
+Web Sketch Studio provides:
 - **Multi-Layer Stack**: Infinite layers with visibility toggles
 - **Theme System**: Dark/Light mode with persistence
 - **Zero External Icons**: Inline SVGs eliminate runtime dependencies
@@ -40,7 +40,7 @@ DrawLab provides:
 
 ## Features Comparison
 
-| Feature | Legacy Version | DrawLab (v2.0) |
+| Feature | Legacy Version | Web Sketch Studio (v2.0) |
 | :--- | :--- | :--- |
 | **Engine** | Basic HTML5 Canvas | **Konva.js (Vector/Raster Hybrid)** |
 | **Layers** | Single layer | **Reactive Multi-Layer Stack (Infinite)** |
@@ -90,8 +90,8 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/mk-knight23/60-Draw-Web-Canvas-App.git
-cd 60-Draw-Web-Canvas-App
+git clone https://github.com/mk-knight23/24-web-sketch-studio.git
+cd 24-web-sketch-studio
 
 # Install dependencies
 npm install
@@ -107,7 +107,7 @@ npm run build
 
 ## Theme System
 
-DrawLab includes a fully-featured dark/light mode with:
+Web Sketch Studio includes a fully-featured dark/light mode with:
 
 - **System Detection**: Auto-detects OS preference
 - **Manual Toggle**: Switch via header button
