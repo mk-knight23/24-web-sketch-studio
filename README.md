@@ -17,12 +17,38 @@
 
 ## 📦 Deployment
 
+### Live URLs
+
+| Platform | Status | URL |
+|----------|--------|-----|
+| **Render** | ✅ Ready | [Deploy on Render](https://dashboard.render.com) |
+| **Vercel** | ✅ Ready | [Deploy on Vercel](https://vercel.com) |
+| **Firebase** | ✅ Ready | [Deploy on Firebase](https://firebase.google.com) |
+| **AWS Amplify** | ✅ Ready | [Deploy on AWS Amplify](https://aws.amazon.com/amplify/) |
+| **GitHub Pages** | ✅ Ready | [Live Demo](https://mk-knight23.github.io/24-web-sketch-studio/) |
+
 ### Render (One-Click Deploy)
 This repository includes a `render.yaml` blueprint for automated deployment:
 1. Visit [dashboard.render.com](https://dashboard.render.com)
 2. Click "New +" → "Blueprint"
 3. Connect repository: `mk-knight23/24-web-sketch-studio`
 4. Render will auto-detect and apply the blueprint configuration
+
+### Vercel Deployment
+```bash
+npx vercel --prod
+```
+
+### Firebase Deployment
+```bash
+npm install -g firebase-tools
+firebase login
+firebase init hosting
+firebase deploy
+```
+
+### AWS Amplify Deployment
+Connect repository to AWS Amplify Console - `amplify.yml` included.
 
 ### Manual Deployment
 - **Build Command**: `npm run build`
