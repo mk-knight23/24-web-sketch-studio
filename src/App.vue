@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { RouterLink, RouterView } from 'vue-router'
 import { useCanvasStore } from './stores/canvasStore'
 import { useTheme } from './composables/useTheme'
 
@@ -28,11 +29,26 @@ const colors = ['#ffffff', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'
 
     <!-- Top Header -->
     <header class="h-20 border-b border-studio-border px-10 flex items-center justify-between bg-studio-card z-50">
-       <div class="flex items-center space-x-3 text-white">
-          <div class="bg-studio-primary p-2 rounded-xl rotate-12">
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+       <div class="flex items-center space-x-6 text-white">
+          <!-- Navigation -->
+          <nav class="flex items-center space-x-2 bg-white/5 border border-white/5 rounded-2xl p-2">
+            <RouterLink to="/" class="p-2 hover:bg-white/10 rounded-xl transition-all" title="Home">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </RouterLink>
+            <RouterLink to="/stats" class="p-2 hover:bg-white/10 rounded-xl transition-all" title="Statistics">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </RouterLink>
+            <RouterLink to="/settings" class="p-2 hover:bg-white/10 rounded-xl transition-all" title="Settings">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m5.25-12.25l-4.24 4.24m0 8.48l-4.24 4.24M1 12h6m6 0h6m-2.25 5.25l-4.24-4.24m0-8.48l-4.24-4.24"/></svg>
+            </RouterLink>
+          </nav>
+
+          <div class="flex items-center space-x-3">
+             <div class="bg-studio-primary p-2 rounded-xl rotate-12">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+             </div>
+             <span class="font-display font-black text-xl tracking-tighter uppercase italic">Draw<span class="text-studio-primary">Lab</span></span>
           </div>
-          <span class="font-display font-black text-xl tracking-tighter uppercase italic">Draw<span class="text-studio-primary">Lab</span></span>
        </div>
 
        <div class="flex items-center space-x-6">
@@ -158,6 +174,9 @@ const colors = ['#ffffff', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'
        </aside>
 
     </div>
+
+    <!-- Router View for Stats and Settings pages -->
+    <RouterView />
   </div>
 </template>
 
