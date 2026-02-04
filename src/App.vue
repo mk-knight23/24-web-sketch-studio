@@ -25,10 +25,10 @@ const colors = ['#ffffff', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'
 </script>
 
 <template>
-  <div class="h-screen w-screen flex flex-col bg-studio-bg dark:bg-studio-bg overflow-hidden font-sans transition-colors duration-500" :class="{ 'light-mode': !isDarkMode }">
+  <div class="h-screen w-screen flex flex-col bg-[var(--studio-bg)] dark:bg-[var(--studio-bg)] overflow-hidden font-sans transition-colors duration-500" :class="{ 'light-mode': !isDarkMode }">
 
     <!-- Top Header -->
-    <header class="h-20 border-b border-studio-border px-10 flex items-center justify-between bg-studio-card z-50">
+    <header class="h-20 border-b border-[var(--studio-border)] px-10 flex items-center justify-between bg-[var(--studio-card)] z-50">
        <div class="flex items-center space-x-6 text-white">
           <!-- Navigation -->
           <nav class="flex items-center space-x-2 bg-white/5 border border-white/5 rounded-2xl p-2">
@@ -44,10 +44,10 @@ const colors = ['#ffffff', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'
           </nav>
 
           <div class="flex items-center space-x-3">
-             <div class="bg-studio-primary p-2 rounded-xl rotate-12">
+             <div class="bg-[var(--studio-primary)] p-2 rounded-xl rotate-12">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
              </div>
-             <span class="font-display font-black text-xl tracking-tighter uppercase italic">Draw<span class="text-studio-primary">Lab</span></span>
+             <span class="font-display font-black text-xl tracking-tighter uppercase italic">Draw<span class="text-[var(--studio-primary)]">Lab</span></span>
           </div>
        </div>
 
@@ -65,7 +65,7 @@ const colors = ['#ffffff', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'
              </button>
           </div>
           <div class="h-8 w-px bg-studio-border"></div>
-          <button class="bg-white text-black px-6 py-2.5 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-studio-primary hover:text-white transition-all flex items-center">
+          <button class="bg-white text-black px-6 py-2.5 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-[var(--studio-primary)] hover:text-white transition-all flex items-center">
              <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Export Studio
           </button>
        </div>
@@ -108,7 +108,7 @@ const colors = ['#ffffff', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'
        </div>
 
        <!-- Canvas Stage -->
-       <main class="flex-1 bg-studio-canvas relative overflow-hidden flex items-center justify-center">
+       <main class="flex-1 bg-[var(--studio-canvas)] relative overflow-hidden flex items-center justify-center">
           <div class="shadow-2xl border border-white/5">
              <v-stage :config="config" class="bg-white">
                 <v-layer v-for="layer in store.layers" :key="layer.id" :config="{ visible: layer.visible }">
@@ -119,7 +119,7 @@ const colors = ['#ffffff', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'
        </main>
 
        <!-- Layers Panel -->
-       <aside class="w-80 bg-studio-card border-l border-studio-border p-8 flex flex-col space-y-10 z-40 overflow-y-auto custom-scrollbar">
+       <aside class="w-80 bg-[var(--studio-card)] border-l border-[var(--studio-border)] p-8 flex flex-col space-y-10 z-40 overflow-y-auto custom-scrollbar">
           <div class="space-y-2">
              <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500">Workspace</h3>
              <h2 class="text-2xl font-display font-black text-white leading-none">Hierarchy</h2>
@@ -128,7 +128,7 @@ const colors = ['#ffffff', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'
           <div class="space-y-4 text-white">
              <div class="flex items-center justify-between">
                 <span class="text-[10px] font-black uppercase tracking-widest text-slate-600">{{ store.layers.length }} ACTIVE LAYERS</span>
-                <button class="p-2 hover:bg-white/5 rounded-lg text-studio-primary transition-all" aria-label="Add layer">
+                <button class="p-2 hover:bg-white/5 rounded-lg text-[var(--studio-primary)] transition-all" aria-label="Add layer">
                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
                 </button>
              </div>
@@ -196,7 +196,7 @@ const colors = ['#ffffff', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'
   color: #1a1a1a !important;
 }
 
-.light-mode .bg-studio-card {
+.light-mode .bg-[var(--studio-card)] {
   background-color: #ffffff;
 }
 
