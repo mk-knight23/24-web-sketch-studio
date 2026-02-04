@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "sketch-studio",
     "public": "dist",
     "ignore": [
       "firebase.json",
