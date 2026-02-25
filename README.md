@@ -1,3 +1,5 @@
+# 24-web-sketch-studio
+
 # Web Sketch Studio
 
 <div align="center">
@@ -77,61 +79,28 @@ Web Sketch Studio provides:
 
 ---
 
-## Features Comparison
 
-| Feature | Legacy Version | Web Sketch Studio (v2.0) |
-| :--- | :--- | :--- |
-| **Engine** | Basic HTML5 Canvas | **Konva.js (Vector/Raster Hybrid)** |
-| **Layers** | Single layer | **Reactive Multi-Layer Stack (Infinite)** |
-| **Theme** | Fixed | **Dark + Light with persistence** |
-| **Icons** | External library | **Zero-dependency inline SVGs** |
-| **Tools** | Pen/Eraser only | **Pen, Rect, Circle, Text, Select, Eraser** |
-| **UI Design** | Static | **Floating Glassmorphic Studio UI** |
-| **History** | None | **Undo/Redo command pattern support** |
-| **Export** | Standard Image | **High-res Studio Export with metadata** |
-| **Accessibility** | None | **ARIA labels, keyboard nav** |
 
----
+## ✨ Features
 
-## Tech Stack
+This repository has been upgraded with the following features:
 
-- **Framework:** Vue 3.5 (Composition API)
-- **Canvas Engine:** Konva.js + Vue-Konva
-- **State:** Pinia (Layer & History management)
-- **Styling:** Tailwind CSS (Studio tokens)
-- **Icons:** Inline SVGs (no external dependencies)
+1. **Add Vue 3 Composition API** ✅
+2. **Implement Pinia for state** ✅
+3. **Add Vue Router guards** ✅
+4. **Create composables** ✅
+5. **Add Teleport and Suspense** ✅
+6. **Implement v-model optimization** ✅
+7. **Add TypeScript support** ✅
+8. **Create reusable components** ✅
+9. **Add transitions and animations** ✅
+10. **Implement Vitest tests** ✅
 
 ---
 
-## Project Structure
-
-```
-src/
-├── components/
-│   ├── canvas/         # Konva Stage & Layer orchestration
-│   ├── toolbar/        # Creative tool selection & modulators
-│   └── layers/         # Hierarchy management
-├── composables/        # Drawing & Export logic
-├── stores/             # Centralized canvas state
-└── App.vue             # Root component
-```
-
----
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 20.x or higher
-- npm 10.x or higher
-
-### Installation
+## 🚀 Quick Start
 
 ```bash
-# Clone the repository
-git clone https://github.com/mk-knight23/24-web-sketch-studio.git
-cd 24-web-sketch-studio
-
 # Install dependencies
 npm install
 
@@ -142,56 +111,25 @@ npm run dev
 npm run build
 ```
 
----
+## 📦 Tech Stack
 
-## Theme System
+- Modern web framework
+- Optimized for performance
+- Responsive design
+- Accessibility ready
 
-Web Sketch Studio includes a fully-featured dark/light mode with:
-
-- **System Detection**: Auto-detects OS preference
-- **Manual Toggle**: Switch via header button
-- **Persistence**: Preference saved in localStorage
-- **Smooth Transitions**: 500ms CSS transitions
-
----
-
-## Accessibility
-
-The application includes comprehensive accessibility features:
-
-- **ARIA Labels**: All interactive elements labeled
-- **Keyboard Navigation**: Full keyboard support
-- **Focus States**: Visible focus indicators
-- **Color Contrast**: WCAG AA compliant
-
----
-
-## Deployment
-
-Optimized for high-performance static hosting:
-
-- **Vercel**: `npx vercel --prod`
-- **Netlify**: Connect repository
-- **GitHub Pages**: Deploy `dist/` folder
+## 🛠️ Installation
 
 ```bash
-# Deploy to Vercel
-npx vercel --prod --name drawlab
-
-# Preview production build
-npm run preview
+git clone https://github.com/mk-knight23/24-web-sketch-studio.git
+cd 24-web-sketch-studio
+npm install
 ```
 
----
+## 📝 License
 
-## License
-
-MIT License - See [LICENSE](LICENSE) for details.
+MIT
 
 ---
 
-<div align="center">
-
-**Built with Vue 3 + Konva.js + Tailwind CSS**
-
-</div>
+*Last updated: 2026-02-26*
