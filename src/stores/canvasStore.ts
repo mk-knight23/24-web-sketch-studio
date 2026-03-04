@@ -45,27 +45,27 @@ export const useCanvasStore = defineStore('canvas', {
     strokeWidth: 4,
     layers: [
       { id: '1', name: 'Background', visible: true, locked: false, shapes: [] },
-      { id: '2', name: 'Layer 1', visible: true, locked: false, shapes: [] }
+      { id: '2', name: 'Layer 1', visible: true, locked: false, shapes: [] },
     ],
     activeLayerId: '2',
     history: [],
     historyIndex: -1,
     isDrawing: false,
-    currentShape: null
+    currentShape: null,
   }),
   getters: {
     activeLayer: (state): Layer | undefined => {
-      return state.layers.find(l => l.id === state.activeLayerId)
+      return state.layers.find((l) => l.id === state.activeLayerId)
     },
     allShapes: (state): Shape[] => {
       const shapes: Shape[] = []
-      state.layers.forEach(layer => {
+      state.layers.forEach((layer) => {
         if (layer.visible) {
           shapes.push(...layer.shapes)
         }
       })
       return shapes
-    }
+    },
   },
   actions: {
     setTool(tool: string) {
@@ -78,7 +78,7 @@ export const useCanvasStore = defineStore('canvas', {
       this.strokeWidth = width
     },
     toggleLayerVisibility(id: string) {
-      const layer = this.layers.find(l => l.id === id)
+      const layer = this.layers.find((l) => l.id === id)
       if (layer) layer.visible = !layer.visible
     },
 
@@ -99,7 +99,7 @@ export const useCanvasStore = defineStore('canvas', {
             type: 'pen',
             points: [pos.x, pos.y],
             stroke: this.strokeColor,
-            strokeWidth: this.strokeWidth
+            strokeWidth: this.strokeWidth,
           }
           break
         case 'rect':
@@ -111,7 +111,7 @@ export const useCanvasStore = defineStore('canvas', {
             width: 0,
             height: 0,
             stroke: this.strokeColor,
-            strokeWidth: this.strokeWidth
+            strokeWidth: this.strokeWidth,
           }
           break
         case 'circle':
@@ -122,7 +122,7 @@ export const useCanvasStore = defineStore('canvas', {
             y: pos.y,
             radius: 0,
             stroke: this.strokeColor,
-            strokeWidth: this.strokeWidth
+            strokeWidth: this.strokeWidth,
           }
           break
       }
@@ -166,7 +166,9 @@ export const useCanvasStore = defineStore('canvas', {
             shouldAdd = (this.currentShape.points?.length || 0) > 2
             break
           case 'rect':
-            shouldAdd = Math.abs(this.currentShape.width || 0) > 2 && Math.abs(this.currentShape.height || 0) > 2
+            shouldAdd =
+              Math.abs(this.currentShape.width || 0) > 2 &&
+              Math.abs(this.currentShape.height || 0) > 2
             break
           case 'circle':
             shouldAdd = (this.currentShape.radius || 0) > 2
@@ -225,15 +227,15 @@ export const useCanvasStore = defineStore('canvas', {
         name: `Layer ${newId}`,
         visible: true,
         locked: false,
-        shapes: []
+        shapes: [],
       })
       this.activeLayerId = newId
     },
 
     setActiveLayer(id: string) {
-      if (this.layers.find(l => l.id === id)) {
+      if (this.layers.find((l) => l.id === id)) {
         this.activeLayerId = id
       }
-    }
-  }
+    },
+  },
 })

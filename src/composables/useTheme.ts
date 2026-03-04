@@ -31,6 +31,6 @@ export function useTheme() {
 
   return {
     isDarkMode,
-    toggleTheme
+    toggleTheme,
   }
 }

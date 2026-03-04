@@ -5,7 +5,9 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
         <h2 class="text-xl font-semibold mb-2">Canvas</h2>
-        <p class="text-gray-600 dark:text-gray-400">Create and edit your sketches with powerful tools.</p>
+        <p class="text-gray-600 dark:text-gray-400">
+          Create and edit your sketches with powerful tools.
+        </p>
       </div>
       <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
         <h2 class="text-xl font-semibold mb-2">Layers</h2>
