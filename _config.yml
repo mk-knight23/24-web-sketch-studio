@@ -1,15 +1,5 @@
-# GitHub Pages Configuration
 theme: jekyll-theme-cayman
-title: Multi-layer Canvas Drawing App
+title: web sketch studio
 description: Documentation for 24-web-sketch-studio
 baseurl: /24-web-sketch-studio
 url: https://mk-knight23.github.io
-
-# Navigation
-nav:
-  - title: Home
-    url: /
-  - title: Architecture
-    url: /architecture/
-  - title: API
-    url: /api/
