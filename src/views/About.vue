@@ -1,11 +1,11 @@
 <template>
   <div class="max-w-3xl mx-auto px-6 py-12 space-y-8">
     <section>
-      <h2 class="text-3xl font-black tracking-tight mb-4">About DrawLab</h2>
+      <h2 class="text-3xl font-black tracking-tight mb-4">About MK SketchFlow</h2>
       <p class="text-gray-400 leading-relaxed">
-        DrawLab is a free, browser-based drawing and canvas tool. Create sketches, diagrams, and
+        MK SketchFlow is a free, browser-based drawing and canvas tool. Create sketches, diagrams, and
         digital art using pen, shapes, and eraser tools. Export your work as PNG. Built and maintained
-        by <strong class="text-white">Musharraf Kazi</strong>.
+        by <strong class="text-white">Qazi Musharof</strong>.
       </p>
     </section>
 
@@ -25,7 +25,7 @@
     <section id="privacy">
       <h3 class="text-xl font-bold mb-3">Privacy Policy</h3>
       <p class="text-gray-400 text-sm leading-relaxed">
-        <strong class="text-white">Data Collection:</strong> DrawLab does not collect personal data.
+        <strong class="text-white">Data Collection:</strong> MK SketchFlow does not collect personal data.
         No accounts, no registration. Your drawings exist only in your browser's canvas memory and
         are never transmitted to any server.
       </p>
@@ -35,7 +35,7 @@
     <section id="terms">
       <h3 class="text-xl font-bold mb-3">Terms of Service</h3>
       <p class="text-gray-400 text-sm leading-relaxed">
-        DrawLab is provided "as is" without warranty. This is a free educational and creative tool.
+        MK SketchFlow is provided "as is" without warranty. This is a free educational and creative tool.
         You retain full ownership of any artwork you create.
       </p>
       <p class="text-gray-500 text-xs mt-3">Last updated: July 2026</p>
@@ -57,6 +57,6 @@
     <router-link
       to="/"
       class="inline-block mt-4 text-sm text-blue-400 hover:underline"
-    >← Back to DrawLab</router-link>
+    >← Back to MK SketchFlow</router-link>
   </div>
 </template>
