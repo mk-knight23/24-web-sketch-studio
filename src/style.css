@@ -2,12 +2,14 @@
 
 :root {
   color-scheme: dark;
-  --studio-bg: #050505;
-  --studio-card: #111114;
+  --studio-bg: #0a0a14;
+  --studio-card: rgba(20, 20, 30, 0.7);
   --studio-primary: #3b82f6;
-  --studio-accent: #10b981;
-  --studio-border: #1f1f23;
-  --studio-canvas: #1a1a1f;
+  --studio-accent: #22d3ee;
+  --studio-border: rgba(255, 255, 255, 0.06);
+  --studio-canvas: #12121c;
+  --studio-glass: rgba(20, 20, 30, 0.5);
+  --studio-glass-border: rgba(255, 255, 255, 0.08);
 }
 
 body {
@@ -16,6 +18,34 @@ body {
   font-family: Inter, system-ui, sans-serif;
   margin: 0;
   display: block;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59,130,246,0.08), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -200px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(34,211,238,0.05), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 ::selection {
@@ -29,45 +59,26 @@ body {
   padding: 0;
 }
 
-.glass-toolbar {
-  background-color: rgba(17, 17, 20, 0.8);
-  backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  border-radius: 1rem;
+/* Glassmorphism overrides */
+.bg-\[\#111114\],
+.bg-studio-card {
+  background: var(--studio-glass) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: var(--studio-glass-border) !important;
 }
 
-.tool-button {
-  padding: 0.75rem;
-  border-radius: 0.75rem;
-  transition: all 0.2s;
-  color: #94a3b8;
+.border-\[\#1f1f23\] {
+  border-color: var(--studio-glass-border) !important;
 }
 
-.tool-button:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  color: white;
+/* Canvas area retains solid dark for clear drawing */
+canvas {
+  border-radius: 12px;
 }
 
-.tool-button:active {
-  transform: scale(0.9);
-}
-
-.tool-button-active {
-  background-color: rgba(59, 130, 246, 0.2);
-  color: var(--studio-primary);
-}
-
-.tool-button-active:hover {
-  background-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 9999px;
+/* Toolbar glass */
+.flex.items-center.gap-1 {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
