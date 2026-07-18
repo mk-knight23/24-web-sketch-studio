@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://24-web-sketch-studio.vercel.app/sitemap.xml
