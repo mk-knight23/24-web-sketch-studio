@@ -1,108 +1,34 @@
-# 🚀 24-web-sketch-studio (Collective Production Edition)
+# MK SketchFlow
 
-## 💎 Overview
-Fully production-grade implementation of 24-web-sketch-studio, refactored by the **69-Agent Opencode Collective**.
+**Drawing, Whiteboard & Annotation Studio**
 
-## 🛡️ Trust & Compliance
-- **CI/CD**: Automated GitHub Actions with Gitleaks security scans.
-- **Security**: Standardized [SECURITY.md](SECURITY.md) protocol.
-- **Design**: Opencode Premium Design Tokens integrated.
+Free browser-based drawing tool with shapes, text, layers, and multiple export formats.
 
-## 🏁 48-Hour Roadmap
-1. Initialize infrastructure via `.github/workflows`.
-2. Set your secrets in GitHub Environment settings.
-3. Deploy to production via Vercel/Docker.
+🔗 **Live**: [https://24-web-sketch-studio.vercel.app](https://24-web-sketch-studio.vercel.app)
 
-![Evolution](https://img.shields.io/badge/Evolution-Live-brightgreen)
-![Phase 2](https://img.shields.io/badge/Phase-2-blue)
-![Score](https://img.shields.io/badge/Score-100%2F100-gold)
+## Tech Stack
 
-Part of the **60-Repo Evolution Project**.
+Vue 3.5, TypeScript, Vite 7, Pinia, Canvas API
 
-## 📋 Evolution Status
-
-| Phase | Status | Repos |
-|-------|--------|-------|
-| Phase 1 | ✅ Complete | 01-20 |
-| Phase 2 | 🔄 Active | 21-40 |
-| Phase 3 | ⏳ Pending | 41-60 |
-
-## 🛠️ Tech Stack
-
-- **Framework:** Modern stack
-- **CI/CD:** 24/7 Continuous Evolution
-- **Deployment:** Multi-platform
-
-## 📦 What's Included
-
-- ✅ Professional README
-- ✅ Complete EVOLUTION.md
-- ✅ 5 LinkedIn posts
-- ✅ 2 video scripts  
-- ✅ Podcast script
-- ✅ Architecture docs
-- ✅ API documentation
-- ✅ GitHub Actions workflow
-- ✅ Multi-platform deployment configs
-
-## 🚀 Quick Start
+## Getting Started
 
 ```bash
-git clone https://github.com/mk-knight23/24-web-sketch-studio.git
-cd 24-web-sketch-studio
 npm install
 npm run dev
 ```
 
-## 📊 Evolution Metrics
+## Environment Variables
 
-| Metric | Score |
-|--------|-------|
-| Documentation | 20/20 |
-| CI/CD | 20/20 |
-| Deployment | 20/20 |
-| Code Quality | 20/20 |
-| Security | 20/20 |
-| **Total** | **100/100** |
+See `.env.example`.
 
-## 🌐 Live URLs
+## Contributing
 
-| Platform | URL |
-|----------|-----|
-| Vercel | https://24-web-sketch-studio.vercel.app |
-| Netlify | https://24-web-sketch-studio.netlify.app |
-| Firebase | https://24-web-sketch-studio.web.app |
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## 📁 Structure
+## License
 
-```
-├── .github/workflows/     # CI/CD workflows
-├── marketing/             # Marketing content
-│   ├── linkedin/         # 5 LinkedIn posts
-│   ├── videos/           # 2 video scripts
-│   └── audio/            # Podcast script
-├── docs/                 # Documentation
-│   ├── architecture/     # System design
-│   └── api/              # API docs
-├── vercel.json           # Vercel config
-├── netlify.toml          # Netlify config
-├── firebase.json         # Firebase config
-├── README.md             # This file
-└── EVOLUTION.md          # Evolution history
-```
-
-## 📄 License
-
-MIT License
+MIT
 
 ---
 
-🦾 **Evolved with OpenClaw** | 2026-03-06
-
-## Security
-
-This project follows security best practices:
-- No hardcoded credentials
-- Dependency scanning enabled
-- Security headers configured
-- Regular security audits performed
+Built with care by **Qazi Musharof** — [Kazi Developer](https://www.mkazi.live)
