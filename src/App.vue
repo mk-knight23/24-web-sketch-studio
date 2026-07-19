@@ -144,7 +144,7 @@ function handleMouseUp() {
             </svg>
           </div>
           <span class="font-display font-black text-xl tracking-tighter uppercase italic"
-            >Draw<span class="text-[var(--studio-primary)]">Lab</span></span
+            >MK_<span class="text-[var(--studio-primary)]">SketchFlow</span></span
           >
         </div>
       </div>

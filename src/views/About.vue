@@ -5,7 +5,7 @@
       <p class="text-gray-400 leading-relaxed">
         MK SketchFlow is a free, browser-based drawing and canvas tool. Create sketches, diagrams, and
         digital art using pen, shapes, and eraser tools. Export your work as PNG. Built and maintained
-        by <strong class="text-white">Qazi Musharof</strong>.
+        by <a href="https://www.mkazi.live" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline"><strong>Qazi Musharof — Kazi Developer</strong></a>, an AI Engineer, Systems Architect, and Full-Stack Developer.
       </p>
     </section>
 
